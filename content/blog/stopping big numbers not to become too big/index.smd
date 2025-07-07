@@ -1,0 +1,45 @@
+---
+.title = "stopping big numbers becoming too big",
+.date = @date("2025-07-07T22:29:00"),
+.author = "Silvio Mastrogiovanni",
+.layout = "post.shtml",
+.draft = true,
+--- 
+# ADD: subsections headers
+
+# SECTION: introduction
+
+In my current project "Geo Survivor", the core gameplay mechanic is the grid within the hammers of this mining game. In the game you traverse the geological interior, try to mine shiny crystals while surviving large amounts of enemies. Your only tool and weapon: your geological hammer (you can have up to 3 hammers in the game, but usually start with 1).
+Each of these hammers have slots that you can fill with upgrades. This is a very typical feature that many recent rogue like games have. The player gets is being presented with a modular system where combinations of the elements are waiting to be found by the player. How effective the player combines the jokers in balatro for example is then expressed in form of beating a certain number of chip in blinds.
+In contrast to Balatro I want the player to move and act in a dynamic world and make use of the combinations of upgrades in the hammers. This is expressed in the enhanced ability to mine rock and finding crystals, in the defensive and offensive fights against the hordes of enemies.
+
+# SECTION: the upgrade system in detail with pictures.
+
+The grid mechanic in the hammers is based on some form of energy that is being produced and consumed by various upgrades. I called this energy "orbs". I don't remember why but somehow a orb is a magical item that has fascinated me since my childhood. It is at the same time quite generic but still holds mythical meaning somehow.
+In the image below you see the most basic example of how you could arrange the orb producing upgrades, arrows that move orbs and upgrades that consume orbs to provide some interesting effect to the player.
+# ADD: picture of 5 going into mining power
+The blue upgrade with the 5 on it is what I call an orb generator. it is one of the most basic ones in the game. It just statically generates and provides 5 orbs, when put into one of the slots of the hammer. Next to it you see an arrow upgrade. It's sole purpose is to move orbs from one grid cell to another. The third upgrade with the Pickaxe symbol is now provided with 5 orbs and turns those into a greate mining power. This means the player is now slightly quicker at breaking rocks tiles.
+You can chain together as many upgrades as you want (or fit into your hammer grid). This brings me into a little detour into grid sizes for upgrades:
+
+# SECTION: hammer grid sizes & gameplay implications
+
+I really want to encourage that feeling of needing to make choices between multiple hammer configurations, due to the limited space of the hammer. In the levels of the game you can encounter random shops. In one shop type you can buy the slot extension for hammers. The largest grid I allow in the game rightnow is 10x10. This large grid still somehow fits onto the screen and gives players a very large playfield to come up with cool upgrade layouts.
+I have to admit I still need to test these large grids properly during gameplay. maybe 10x10 it too much room and will lead to go boring builds because all builds fit together in the hammer, making the build not unique anymore. To some degree I'm trying to encourage overlap between builds by having linked mechanics between them. But I hope the most fun to play the game is to decide for a build and slowly optimize the hammer for that.
+
+# SECTION: logical loops or "tipping points"
+
+The balancing of such a game is quite a task. It happened multiple times after I've implemented a few new uprades that had an effect on each other that during testing it showed exploding properties in terms of the numbers going big very quickly. And since the player just needs to find a loop to produce absurd amounts of orbs then they can spend it in every
+
+# SECTION: having to deal with long digit numbers in UI is annoying
+
+Having very large numbers in the game creates a very practical issue. I have to check all UI elements in the game that could potentially show large amounts of digits.
+Balatro just scales the numbers to fit them into the UI. I could also do that, although I did not yet think alot about the font sized in my game. For digits I use a quite large font to make all of the important numbers very readable. I would have to write this dynamic resizing, but I've done similar font scaling before, so I could  quickly work this out. But even with scaling, then the super large number would be drawn very small and that annoys me in my taste for a unified UI look.
+
+# SECTION: my attempt to solve this issue
+
+Some of the critical upgrades that I witnessed or suspected to promote this orb explosion have been nerfed by using the log() funtion to increase the cost of orbs for the repsective effect the more orbs have been provided.
+I think I need to tweek the base of the log function a little more to still make it satisying to use these upgrades, because improving them becomes harder but still you can slowly see the upgrade improve over a run.
+
+The second solution is by limiting the amount of orbs that the arrow upgrades can move. I need to play around with numbers but maybe in level 1 the arrow upgrades start at a max movement of 50 orbs. then you randomly find some in the shop with 
+# []($image.asset('screenshot_add.png').size(800,0))
+

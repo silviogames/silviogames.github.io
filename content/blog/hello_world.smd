@@ -1,0 +1,9 @@
+---
+.title = "Hello world",
+.date = @date("2025-07-07T01:50:00"),
+.author = "Silvio Mastrogiovanni",
+.layout = "post.shtml",
+.draft = false,
+--- 
+This is an initial blog post to test the system.
+

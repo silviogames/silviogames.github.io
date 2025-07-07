@@ -1,0 +1,15 @@
+---
+.title = "my opinion on LLMs",
+.date = @date("2025-07-07T02:18:00"),
+.author = "Silvio Mastrogiovanni",
+.layout = "post.shtml",
+.draft = true,
+--- 
+# []($image.asset('screenshot_add.png').size(800,0))
+I should point out that I try not to use any LLM when writing these posts. I guess native english
+speakers can tell, because they can see it from my not so large vocabolary or my german way of forming way to long sentences.
+My general opinion to LLMs is mixed.
+I can appretiate the fact that mankind developed impressive algorithms and having a conversation with them feels much better than maybe 15 or even 10 years ago.
+
+I have a limited understanding of the math behind the LLM, but my intuition tells me 
+

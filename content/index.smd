@@ -1,0 +1,12 @@
+---
+.title = "About me",
+.date = @date("1990-01-01T00:00:00"),
+.author = "Sample Author",
+.layout = "index.shtml",
+.draft = false,
+--- 
+Hey, my name is Silvio.
+
+I'm a geology master student and a hobbyist gamedev. After many years working with Java and Libgdx I finally moved on and learned zig and raylib.
+
+Currently (2025) I work on a 2D mining and survival game called "Geo Survivor" and I'm currently working on getting a Demo ready, to put on steam.

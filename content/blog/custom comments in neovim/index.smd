@@ -1,0 +1,23 @@
+---
+.title = "custom comments in neovim",
+.date = @date("2025-07-07T02:18:00"),
+.author = "Silvio Mastrogiovanni",
+.layout = "post.shtml",
+.draft = false,
+--- 
+In neovim I use a [todo comment plugin](https://github.com/folke/todo-comments.nvim)
+which formats certain comments in your code. The plugin came with [kickstart.nvim](https://github.com/nvim-lua/kickstart.nvim/tree/master) You can also define your own custom comments along with
+the color that should be used for highlighting.
+
+I wanted to show a few ideas of custom comments I added. I know this may not be super interesting, but I like decorating my code to make me understand it better.
+
+[]($image.asset('screenshot_todo_section.png').size(800,0))
+The Section comment is used in longer lists to seperate groups. In this example I define the properties of all the sound effects in the game and using the SELECTION: comment I can visually seperate them. By seraching for 'SECTION: + some group name' I can also quickly navigate to that code.
+
+In the next example I created a STEP comment:
+[]($image.asset('screenshot_step.png').size(800,0))
+I use this to divide longer algorithms into steps with a little description what each step does. This helps me to understand roughly what is going on in a function or algorithm, even when visiting the code after a few months.
+
+I also added a very simple ADD comment:
+[]($image.asset('screenshot_add.png').size(800,0))
+The TODO comment was already available but most of my TODO comments would start with 'add xy', so I thought, why not make a ADD comment with a nicer color. So I still use both TODO and ADD but for different scenarios.
