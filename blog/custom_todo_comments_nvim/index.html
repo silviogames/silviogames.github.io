@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+  <head id="head">
+    <meta charset="utf-8">
+    <meta name="viewport" content="initial-scale=1">
+    <title>Silvio blog</title>
+    <link type="text/css" rel="stylesheet" href="/style.css">
+    <link type="text/css" rel="stylesheet" href="/highlight.css">
+    <!-- mathtex -->
+    <link type="text/css" rel="stylesheet" href="/Temml-Local.css">
+    <script defer src="/temml.min.js"></script>
+    <script defer src="/render-mathtex.js"></script>
+    <!-- /mathtex -->
+    
+  <style>
+    #prev-next {
+     display: flex;
+     flex-direction: row;
+     justify-content: space-between;
+     margin-top: 40px;
+    }
+
+    figure {
+      align-self: center;
+      text-align: center;
+      font-style: italic;
+    }
+
+    .post {
+      display:flex;
+      flex-direction: column;
+    }
+  </style>
+
+  </head>
+  <body id="body">
+    <h1 class="site-title">Silvio blog</h1>
+    <nav>
+      <a href="/blog/">Blog</a>
+       &nbsp; • &nbsp;
+      <a href="/">About me</a>
+    </nav>
+    
+  <h1>custom comments in neovim</h1>
+  <div class="post"><p>In neovim I use a <a href="https://github.com/folke/todo-comments.nvim" target="_blank">todo comment plugin</a> which formats certain comments in your code. The plugin came with <a href="https://github.com/nvim-lua/kickstart.nvim/tree/master" target="_blank">kickstart.nvim</a> You can also define your own custom comments along with the color that should be used for highlighting.</p><p>I wanted to show a few ideas of custom comments I added. I know this may not be super interesting, but I like decorating my code to make me understand it better.</p><p><img src="/blog/custom_todo_comments_nvim/screenshot_todo_section.png" width="800"> The Section comment is used in longer lists to seperate groups. In this example I define the properties of all the sound effects in the game and using the SELECTION: comment I can visually seperate them. By seraching for ‘SECTION: + some group name’ I can also quickly navigate to that code.</p><p>In the next example I created a STEP comment: <img src="/blog/custom_todo_comments_nvim/screenshot_step.png" width="800"> I use this to divide longer algorithms into steps with a little description what each step does. This helps me to understand roughly what is going on in a function or algorithm, even when visiting the code after a few months.</p><p>I also added a very simple ADD comment: <img src="/blog/custom_todo_comments_nvim/screenshot_add.png" width="800"> The TODO comment was already available but most of my TODO comments would start with ‘add xy’, so I thought, why not make a ADD comment with a nicer color. So I still use both TODO and ADD but for different scenarios.</p></div>
+  <div id="prev-next">
+    <div></div>
+    <div></div>
+  </div>
+
+    <footer>
+      <hr>
+      <h5>SITE UNDER CONSTRUCTION</h5>
+      <img src="/under-construction.gif" width="110">
+    </footer>
+  </body>
+</html>
